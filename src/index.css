@@ -80,6 +80,21 @@
   * {
     @apply border-border;
   }
+  html {
+    /* Base font size - acts as a "zoom" out for all Tailwind rem utilities on larger screens */
+    font-size: 16px;
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 90%; 
+    }
+  }
+  @media (min-width: 1024px) {
+    html {
+      /* Scales everything perfectly down by 25% on laptops/desktops */
+      font-size: 75%; 
+    }
+  }
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', system-ui, sans-serif;

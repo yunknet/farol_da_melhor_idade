@@ -49,15 +49,11 @@ const Index = () => {
     <div className="min-h-screen bg-background font-sans text-foreground selection:bg-accent/30 overflow-x-hidden">
       
       {/* Fixed Navigation Header */}
-      <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm py-4">
+      <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/75 backdrop-blur-md border-b border-slate-100/50 shadow-sm py-4 md:py-2">
         <div className="container mx-auto px-6 flex items-center justify-between">
-          <a href="#inicio" className="flex items-center gap-4 group">
-            <div className="relative h-20 md:h-28 w-auto flex items-center justify-center">
-              <img src="/Logo.png" alt="Yuri Soares" className="h-full w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform scale-110 md:scale-125 origin-left" />
-            </div>
-            <div className="flex flex-col ml-2 md:ml-4">
-              <span className="font-bold text-primary text-xl md:text-2xl leading-tight">Yuri Soares</span>
-              <span className="text-xs md:text-sm uppercase tracking-widest text-muted-foreground font-semibold">Consultor de Consórcios</span>
+          <a href="#inicio" className="flex items-center group">
+            <div className="relative h-20 md:h-32 w-auto flex items-center justify-start">
+              <img src="/Logo.png" alt="Yuri Soares" className="h-[120%] md:h-[140%] w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform origin-left" />
             </div>
           </a>
 
@@ -121,17 +117,22 @@ const Index = () => {
       {/* Header / Hero Section */}
       <header id="inicio" className="relative bg-gradient-navy text-primary-foreground min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-primary">
-          <div className="absolute inset-y-0 right-0 w-full lg:w-[70%] z-0">
-            <img 
-              src="/yuri1.jpg" 
-              alt="Yuri Soares" 
-              className="w-full h-full object-cover object-[70%_top] lg:object-[right_20%] opacity-100"
-            />
-            {/* Gradiente para suavizar a transição lateral sem escurecer muito a foto do Yuri */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/50 to-transparent lg:block hidden" />
+          <div className="absolute inset-0 right-0 w-full lg:w-[70%] lg:left-auto z-0">
+            <div className="w-full h-full pt-16 md:pt-32 relative">
+              <img 
+                src="/yuri1.jpg" 
+                alt="Yuri Soares" 
+                className="w-full h-full object-cover object-[70%_top] lg:object-[80%_0%] opacity-100"
+              />
+              {/* Gradiente superior forte exatamente em cima da divisão da imagem para camuflar o corte */}
+              <div className="absolute top-16 md:top-32 inset-x-0 h-40 md:h-64 bg-gradient-to-b from-primary via-primary/80 to-transparent z-10" />
+            </div>
+            
+            {/* Gradiente Lateral/Inferior */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/30 to-transparent lg:block hidden" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent lg:hidden block" />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-transparent to-transparent z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent z-10 pointer-events-none" />
         </div>
         
         <div className="container mx-auto px-6 relative z-20">
@@ -329,25 +330,32 @@ const Index = () => {
 
       {/* O Diferencial: Lance Embutido */}
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-6 max-w-5xl shadow-card rounded-3xl overflow-hidden bg-white border border-border">
-          <div className="flex flex-col md:flex-row">
-            <div className="md:w-5/12 bg-secondary p-12 flex flex-col justify-center border-b md:border-b-0 md:border-r border-border min-h-[300px]">
-              <Target className="w-16 h-16 text-primary mb-6" />
-              <h2 className="text-3xl font-bold mb-4 text-primary">Não tem dinheiro para o lance?</h2>
-              <p className="text-xl text-muted-foreground font-medium">Nós ajudamos você com o nosso grande diferencial.</p>
-            </div>
-            
-            <div className="md:w-7/12 p-8 md:p-12">
-              <h3 className="text-2xl font-bold text-accent mb-6">O Poder do Lance Embutido</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Com o Lance Embutido, você pode usar <strong>até 25% do valor da sua própria carta de crédito</strong> para dar o lance sem precisar tirar nenhum centavo do próprio bolso.
-              </p>
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="bg-gradient-navy rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
+            <div className="flex flex-col md:flex-row">
+              <div className="md:w-5/12 p-12 md:p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-white/10 relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+                <div className="relative z-10">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">Não tem dinheiro <span className="text-accent underline decoration-accent/30 underline-offset-4">para o lance?</span></h2>
+                  <p className="text-xl text-blue-100 font-medium leading-relaxed">Nós temos a estratégia perfeita para te ajudar com o nosso maior diferencial de mercado.</p>
+                </div>
+              </div>
               
-              <div className="bg-blue-50 border border-blue-100 p-6 rounded-xl">
-                <h4 className="font-bold text-primary mb-2 flex items-center gap-2"><CheckCircle className="w-5 h-5 text-accent"/> Exemplo Prático:</h4>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Quer um crédito de <strong>R$ 100 mil</strong>? Você pode usar <strong>R$ 25 mil</strong> do próprio consórcio para o lance e pegar <strong>R$ 75 mil em mãos</strong> para comprar seu bem. É o grande empurrão que faltava para você ser contemplado mais rápido!
+              <div className="md:w-7/12 p-12 md:p-16 bg-white relative">
+                <h3 className="text-3xl font-bold text-primary mb-6">O Poder do Lance Embutido</h3>
+                <p className="text-lg text-slate-600 leading-relaxed mb-10">
+                  Com o Lance Embutido, você pode usar <strong>até 25% do valor da sua própria carta de crédito</strong> para ofertar o lance. Tudo isso sem descapitalizar e sem tirar dinheiro do seu bolso.
                 </p>
+                
+                <div className="bg-blue-50 border border-blue-100 p-8 rounded-2xl relative shadow-inner">
+                  <div className="absolute -left-4 -top-4 bg-accent text-primary p-3 rounded-2xl shadow-lg transform -rotate-6">
+                    <CheckCircle className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-bold text-primary text-xl mb-3 mt-2 ml-4">Exemplo Prático:</h4>
+                  <p className="text-slate-600 text-[15px] leading-relaxed">
+                    Sua meta é comprar um carro de <strong>R$ 75 mil</strong>? Nós planejamos uma carta de crédito de <strong>R$ 100 mil</strong>. Usamos <strong>R$ 25 mil</strong> do consórcio como o seu lance e você retira exatamente os R$ 75 mil em mãos! É o atalho estratégico para sua contemplação.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -375,9 +383,34 @@ const Index = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Chamada Final (CTA) */}
+      <section className="bg-gradient-navy text-white py-24 relative overflow-hidden text-center">
+        <div className="container mx-auto px-6 relative z-10 flex flex-col items-center justify-center max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">Chega de adiar o seu sonho.</h2>
+          <p className="text-xl text-blue-200 mb-12 leading-relaxed max-w-2xl mx-auto">
+            Deixe seus dados e um de nossos especialistas entrará em contato para montar o perfil e o plano perfeito para você.
+          </p>
           
-          {/* Seção de Depoimentos (Feedbacks) */}
-          <div className="mt-24" id="depoimentos">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 w-full">
+            <div className="flex items-center gap-3 text-blue-100 font-medium">
+              <CheckCircle2 className="text-accent w-6 h-6 shrink-0" /> <span className="text-lg">Atendimento Personalizado</span>
+            </div>
+            <div className="flex items-center gap-3 text-blue-100 font-medium">
+              <CheckCircle2 className="text-accent w-6 h-6 shrink-0" /> <span className="text-lg">Sem compromisso inicial</span>
+            </div>
+            <div className="flex items-center gap-3 text-blue-100 font-medium">
+              <CheckCircle2 className="text-accent w-6 h-6 shrink-0" /> <span className="text-lg">Segurança total na sua compra</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção de Depoimentos (Feedbacks) */}
+      <section className="py-24 bg-white" id="depoimentos">
+        <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold mb-6 text-primary">O que dizem nossos clientes</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -418,7 +451,6 @@ const Index = () => {
                 </div>
               ))}
             </div>
-          </div>
         </div>
       </section>
 
@@ -475,36 +507,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Chamada Final (CTA) */}
-      <section className="bg-gradient-navy text-white py-20 relative overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 max-w-6xl">
-          <div className="lg:w-2/3">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Chega de adiar o seu sonho.</h2>
-            <p className="text-xl text-blue-200 mb-8 leading-relaxed max-w-xl">
-              Deixe seus dados e um de nossos especialistas entrará em contato para montar o perfil e o plano perfeito para você.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mb-8">
-              <div className="flex items-center gap-3 text-blue-100 font-medium">
-                <CheckCircle2 className="text-accent w-6 h-6 shrink-0" /> <span className="text-lg">Atendimento Personalizado</span>
-              </div>
-              <div className="flex items-center gap-3 text-blue-100 font-medium">
-                <CheckCircle2 className="text-accent w-6 h-6 shrink-0" /> <span className="text-lg">Sem compromisso inicial</span>
-              </div>
-              <div className="flex items-center gap-3 text-blue-100 font-medium">
-                <CheckCircle2 className="text-accent w-6 h-6 shrink-0" /> <span className="text-lg">Segurança total na sua compra</span>
-              </div>
-            </div>
-          </div>
-          <div className="lg:w-1/3 w-full shrink-0 flex justify-center lg:justify-end">
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold h-16 px-10 rounded-xl shadow-[0_0_20px_rgba(37,211,102,0.3)] uppercase tracking-wider text-sm border-none">
-                <MessageCircle className="w-5 h-5 mr-3" /> Falar com Especialista
-              </Button>
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-[#1a2332] text-slate-300 py-16 border-t border-white/5">
