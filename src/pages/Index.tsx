@@ -52,12 +52,12 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm py-4">
         <div className="container mx-auto px-6 flex items-center justify-between">
           <a href="#inicio" className="flex items-center gap-4 group">
-            <div className="relative h-16 md:h-20 w-auto flex items-center justify-center">
-              <img src="/Logo.png" alt="Yuri Soares" className="h-full w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform" />
+            <div className="relative h-20 md:h-28 w-auto flex items-center justify-center">
+              <img src="/Logo.png" alt="Yuri Soares" className="h-full w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform scale-110 md:scale-125 origin-left" />
             </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-primary text-lg md:text-xl leading-tight">Yuri Soares</span>
-              <span className="text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground font-semibold">Consultor de Consórcios</span>
+            <div className="flex flex-col ml-2 md:ml-4">
+              <span className="font-bold text-primary text-xl md:text-2xl leading-tight">Yuri Soares</span>
+              <span className="text-xs md:text-sm uppercase tracking-widest text-muted-foreground font-semibold">Consultor de Consórcios</span>
             </div>
           </a>
 
@@ -145,16 +145,17 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <a href="#simulador" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto bg-gradient-gold hover:opacity-90 text-primary uppercase font-bold tracking-wide h-16 px-6 md:px-10 text-[15px] md:text-lg shadow-card border-none rounded-xl group transition-all shrink-0 whitespace-nowrap overflow-hidden text-ellipsis">
-                  Fazer simulação gratuita
-                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform shrink-0" />
-                </Button>
-              </a>
+              <Button 
+                onClick={() => document.getElementById('simulador')?.scrollIntoView({ behavior: 'smooth' })}
+                size="lg" 
+                className="w-full sm:w-auto bg-gradient-gold hover:opacity-90 text-primary uppercase font-bold tracking-wide h-16 px-6 md:px-10 text-[15px] md:text-lg shadow-card border-none rounded-xl group transition-all shrink-0 whitespace-nowrap overflow-hidden text-ellipsis"
+              >
+                Fazer simulação gratuita
+                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform shrink-0" />
+              </Button>
             </div>
             
             <div className="mt-10 flex flex-wrap items-center gap-4 text-sm font-medium text-blue-200">
-              <span className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-accent" /> Compra Segura</span>
               <span className="flex items-center gap-2"><Trophy className="w-5 h-5 text-accent" /> Especialista</span>
             </div>
           </div>
