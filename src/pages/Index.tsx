@@ -18,7 +18,10 @@ import {
   Quote,
   Phone,
   Menu,
-  X
+  X,
+  ShieldCheck,
+  Trophy,
+  Target
 } from "lucide-react";
 
 const WHATSAPP_LINK = "https://wa.me/5538991118169?text=Ol%C3%A1+Vi+seu+site+e+gostaria+de+fazer+uma+simula%C3%A7%C3%A3o+de+cons%C3%B3rcio";
