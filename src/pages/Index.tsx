@@ -123,7 +123,7 @@ const Index = () => {
           <div className="absolute inset-0 right-0 w-full lg:w-[70%] lg:left-auto z-0">
             <div className="w-full h-full pt-16 md:pt-32 relative">
               <img 
-                src="/yuri1.jpg" 
+                src="/yuri1.jpeg" 
                 alt="Yuri Soares" 
                 className="w-full h-full object-cover object-[70%_top] lg:object-[80%_0%] opacity-100"
               />

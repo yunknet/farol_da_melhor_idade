@@ -86,13 +86,13 @@
   }
   @media (min-width: 768px) {
     html {
-      font-size: 90%; 
+      font-size: 85%; 
     }
   }
   @media (min-width: 1024px) {
     html {
       /* Scales everything down nicely while container lock prevents stretching */
-      font-size: 80%; 
+      font-size: 72.5%; 
     }
   }
   body {
