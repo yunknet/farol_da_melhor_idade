@@ -21,7 +21,10 @@ import {
   X,
   ShieldCheck,
   Trophy,
-  Target
+  Target,
+  TrendingUp,
+  Landmark,
+  Bike
 } from "lucide-react";
 
 const WHATSAPP_LINK = "https://wa.me/5538991118169?text=Ol%C3%A1+Vi+seu+site+e+gostaria+de+fazer+uma+simula%C3%A7%C3%A3o+de+cons%C3%B3rcio";
@@ -181,8 +184,8 @@ const Index = () => {
               <ul className="space-y-4 mb-8">
                 {[
                   "Parcelas reduzidas até a contemplação",
-                  "Planos flexíveis de 50 a 240 meses",
-                  "Créditos a partir de R$ 50 mil",
+                  "Planos flexíveis de 36 a 240 meses",
+                  "Créditos a partir de R$ 15 mil",
                   "Use o lance embutido para adiantar seu bem"
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-3 text-blue-50 font-medium text-lg">
@@ -366,13 +369,14 @@ const Index = () => {
       <section className="py-24 bg-secondary">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-16 text-primary">O que você vai conquistar?</h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               { icon: Car, title: "Veículos", desc: "Troque de carro ou compre o seu primeiro sem precisar de entrada." },
               { icon: Home, title: "Imóveis", desc: "Sua casa própria, apartamento novo ou aquele terreno para construir." },
-              { icon: Wrench, title: "Reforma", desc: "Crédito liberado para deixar sua casa do jeito que você sempre sonhou." },
-              { icon: Tractor, title: "Pesados e Agro", desc: "Planos especiais desenhados para frotas de caminhões e maquinário." }
+              { icon: Bike, title: "Motos", desc: "Acelere sua liberdade com planos flexíveis para conquistar sua moto." },
+              { icon: Wrench, title: "Serviços", desc: "Crédito liberado para cirurgias, grandes reformas, viagens ou educação." },
+              { icon: TrendingUp, title: "Alavancagem Financeira", desc: "Multiplique recursos e use o sistema de forma estratégica para lucrar." },
+              { icon: Landmark, title: "Alavancagem Patrimonial", desc: "Construção de patrimônio a longo prazo com inteligência financeira." }
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-border group hover:shadow-md transition-all hover:-translate-y-1">
                 <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors">
@@ -388,7 +392,7 @@ const Index = () => {
 
       {/* Chamada Final (CTA) */}
       <section className="bg-gradient-navy text-white py-24 relative overflow-hidden text-center">
-        <div className="container mx-auto px-6 relative z-10 flex flex-col items-center justify-center max-w-4xl mx-auto">
+        <div className="container px-6 relative z-10 flex flex-col items-center justify-center max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">Chega de adiar o seu sonho.</h2>
           <p className="text-xl text-blue-200 mb-12 leading-relaxed max-w-2xl mx-auto">
             Deixe seus dados e um de nossos especialistas entrará em contato para montar o perfil e o plano perfeito para você.
@@ -566,7 +570,7 @@ const Index = () => {
               <span className="block md:inline md:ml-3 md:pl-3 md:border-l border-slate-700 mt-2 md:mt-0">CNPJ: 65.474.055/0001-89</span>
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-4">
-              <span>site desenvolvido por <strong className="text-slate-400">Aureliano Soares</strong></span>
+              <span>Site desenvolvido por <strong className="text-slate-400">Aureliano Soares</strong></span>
               <div className="flex items-center gap-3 text-slate-400">
                 <a href="https://www.instagram.com/netinho.so/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors flex items-center gap-1">
                   <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.822a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg> 

@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, ChevronLeft, Car, Home, Wrench, TrendingUp, Landmark, Zap, BookOpen, Send } from "lucide-react";
+import { ChevronRight, ChevronLeft, Car, Home, Wrench, TrendingUp, Landmark, Zap, BookOpen, Send, Bike } from "lucide-react";
 
 const WHATSAPP_NUMBER = "5538991118169";
 
 const typeOptions = [
-  { id: "Veículos", label: "Consórcio de Veículos", icon: Car, min: 50000, max: 300000, step: 5000 },
+  { id: "Veículos", label: "Consórcio de Veículos", icon: Car, min: 45000, max: 300000, step: 5000 },
   { id: "Imóveis", label: "Consórcio de Imóveis", icon: Home, min: 100000, max: 1000000, step: 10000 },
+  { id: "Motos", label: "Consórcio de Moto", icon: Bike, min: 15000, max: 80000, step: 1000 },
   { id: "Serviços", label: "Serviços (Cirurgia, Reforma etc...)", icon: Wrench, min: 15000, max: 150000, step: 5000 },
   { id: "Alavancagem financeira", label: "Alavancagem financeira", icon: TrendingUp, min: 100000, max: 2000000, step: 20000 },
   { id: "Alavancagem patrimonial", label: "Alavancagem patrimonial", icon: Landmark, min: 200000, max: 5000000, step: 50000 },
@@ -208,7 +209,7 @@ export function Simulator() {
                 />
               </div>
 
-              <div className="mt-auto pt-6 flex gap-3">
+              <div className="mt-auto pt-6 pb-2 flex flex-row gap-3 items-center">
                 <Button 
                   type="button"
                   variant="outline" 
@@ -220,9 +221,10 @@ export function Simulator() {
                 <Button 
                   type="submit" 
                   disabled={formData.name.trim().length < 2}
-                  className="flex-1 h-14 text-base font-bold bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-xl shadow-md border-none disabled:opacity-50"
+                  className="flex-1 h-14 text-[15px] sm:text-base font-bold bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-xl shadow-md border-none disabled:opacity-50 flex items-center justify-center overflow-hidden"
                 >
-                  <Send className="mr-2 w-5 h-5" /> Enviar para o WhatsApp
+                  <Send className="mr-2 w-5 h-5 shrink-0" /> 
+                  <span className="truncate">Enviar WhatsApp</span>
                 </Button>
               </div>
             </form>
