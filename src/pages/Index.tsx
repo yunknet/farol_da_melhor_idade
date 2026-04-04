@@ -106,17 +106,6 @@ const Index = () => {
         )}
       </nav>
 
-      {/* Floating WhatsApp Button */}
-      <a 
-        href={WHATSAPP_LINK}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110 flex items-center justify-center animate-bounce-short"
-        aria-label="Falar no WhatsApp"
-      >
-        <MessageCircle className="w-8 h-8" />
-      </a>
-
       {/* Header / Hero Section */}
       <header id="inicio" className="relative bg-gradient-navy text-primary-foreground min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-primary">
@@ -125,7 +114,7 @@ const Index = () => {
               <img 
                 src="/yuri1.jpeg" 
                 alt="Yuri Soares" 
-                className="w-full h-full object-cover object-[70%_top] lg:object-[80%_0%] opacity-100"
+                className="w-full h-full object-cover object-[40%_top] lg:object-[30%_0%] opacity-90 mix-blend-luminosity"
               />
               {/* Gradiente superior forte exatamente em cima da divisão da imagem para camuflar o corte */}
               <div className="absolute top-16 md:top-32 inset-x-0 h-40 md:h-64 bg-gradient-to-b from-primary via-primary/80 to-transparent z-10" />
