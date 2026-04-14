@@ -39,6 +39,7 @@ export function Simulator() {
   const [type, setType] = useState(typeOptions[0]);
   const [credit, setCredit] = useState(typeOptions[0].min);
   const [objective, setObjective] = useState("");
+  const [bid, setBid] = useState(0);
   const [formData, setFormData] = useState({ name: "" });
 
   const formatCurrency = (value: number) => {
@@ -53,11 +54,12 @@ export function Simulator() {
   const handleTypeChange = (option: typeof typeOptions[0]) => {
     setType(option);
     setCredit(option.min);
+    setBid(0);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = `Olá Yuri! Fiz uma simulação no seu site.%0A%0A*Detalhes:*%0A- Consórcio de: ${type.id}%0A- Valor do crédito: ${formatCurrency(credit)}%0A- Objetivo: ${objective}%0A%0AMeu nome é ${formData.name}. Gostaria de ver as opções de parcelas!`;
+    const text = `Olá Yuri! Fiz uma simulação no seu site.%0A%0A*Detalhes:*%0A- Consórcio de: ${type.id}%0A- Valor do crédito: ${formatCurrency(credit)}%0A- Objetivo: ${objective}${objective === "Lance imediato" ? `%0A- Valor do lance: ${formatCurrency(bid)}` : ""}%0A%0AMeu nome é ${formData.name}. Gostaria de ver as opções de parcelas!`;
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
     window.open(url, "_blank");
   };
@@ -142,29 +144,56 @@ export function Simulator() {
               <span className="text-primary">{type.id}</span> • {formatCurrency(credit)}
             </p>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4 mb-8 overflow-y-auto pr-2 pb-2">
               {objectiveOptions.map((opt) => (
-                <button
-                  key={opt.id}
-                  onClick={() => setObjective(opt.id)}
-                  className={`w-full flex items-start gap-4 p-5 rounded-2xl border-2 transition-all text-left ${
-                    objective === opt.id 
-                      ? "border-primary bg-blue-50/50" 
-                      : "border-slate-100 hover:border-slate-200"
-                  }`}
-                >
-                  <div className={`p-2 rounded-lg ${objective === opt.id ? "bg-primary/10 text-primary" : "bg-slate-50 text-slate-400"}`}>
-                    <opt.icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className={`font-bold mb-1 ${objective === opt.id ? "text-primary" : "text-slate-700"}`}>
-                      {opt.title}
-                    </h4>
-                    <p className="text-sm text-slate-500 leading-relaxed">
-                      {opt.description}
-                    </p>
-                  </div>
-                </button>
+                <div key={opt.id} className="flex flex-col gap-3">
+                  <button
+                    onClick={() => setObjective(opt.id)}
+                    className={`w-full flex items-start gap-4 p-5 rounded-2xl border-2 transition-all text-left ${
+                      objective === opt.id 
+                        ? "border-primary bg-blue-50/50" 
+                        : "border-slate-100 hover:border-slate-200"
+                    }`}
+                  >
+                    <div className={`p-2 rounded-lg ${objective === opt.id ? "bg-primary/10 text-primary" : "bg-slate-50 text-slate-400"}`}>
+                      <opt.icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className={`font-bold mb-1 ${objective === opt.id ? "text-primary" : "text-slate-700"}`}>
+                        {opt.title}
+                      </h4>
+                      <p className="text-sm text-slate-500 leading-relaxed">
+                        {opt.description}
+                      </p>
+                    </div>
+                  </button>
+
+                  {/* Lance Imediato Slider */}
+                  {objective === "Lance imediato" && opt.id === "Lance imediato" && (
+                    <div className="animate-fade-in sm:ml-4 sm:border-l-4 sm:border-l-primary p-4 sm:pl-5 bg-blue-50/50 rounded-2xl border border-blue-100 flex flex-col gap-4">
+                      <div className="flex justify-between items-end gap-2">
+                        <span className="text-slate-700 font-medium text-sm sm:text-base flex-1 leading-tight">Quanto de lance você tem em mãos?</span>
+                        <span className="text-xl sm:text-2xl font-bold text-primary whitespace-nowrap">{formatCurrency(bid)}</span>
+                      </div>
+                      
+                      <div>
+                        <input 
+                          type="range" 
+                          min={0} 
+                          max={credit} 
+                          step={type.step}
+                          value={bid}
+                          onChange={(e) => setBid(Number(e.target.value))}
+                          className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary"
+                        />
+                        <div className="flex justify-between text-xs text-slate-400 font-medium mt-2">
+                          <span>{formatCurrency(0)}</span>
+                          <span>{formatCurrency(credit)}</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
 
