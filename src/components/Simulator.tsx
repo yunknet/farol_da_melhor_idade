@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ChevronLeft, Car, Home, Wrench, TrendingUp, Landmark, Zap, BookOpen, Send, Bike } from "lucide-react";
 
@@ -41,6 +41,41 @@ export function Simulator() {
   const [objective, setObjective] = useState("");
   const [bid, setBid] = useState(0);
   const [formData, setFormData] = useState({ name: "" });
+
+  const bidValues = useMemo(() => {
+    const values = [];
+    for (let i = 0; i <= 10000; i += 500) {
+      if (i <= credit) values.push(i);
+    }
+    
+    let nextValue = Math.ceil(10001 / type.step) * type.step;
+    while (nextValue <= credit) {
+      if (!values.includes(nextValue)) {
+        values.push(nextValue);
+      }
+      nextValue += type.step;
+    }
+    
+    if (values[values.length - 1] !== credit) {
+      values.push(credit);
+    }
+    return values;
+  }, [credit, type.step]);
+
+  const currentBidIndex = useMemo(() => {
+    const idx = bidValues.indexOf(bid);
+    if (idx !== -1) return idx;
+    let closestIdx = 0;
+    let minDiff = Infinity;
+    bidValues.forEach((val, index) => {
+      const diff = Math.abs(val - bid);
+      if (diff < minDiff) {
+        minDiff = diff;
+        closestIdx = index;
+      }
+    });
+    return closestIdx;
+  }, [bid, bidValues]);
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat("pt-BR", {
@@ -180,10 +215,10 @@ export function Simulator() {
                         <input 
                           type="range" 
                           min={0} 
-                          max={credit} 
-                          step={type.step}
-                          value={bid}
-                          onChange={(e) => setBid(Number(e.target.value))}
+                          max={bidValues.length - 1} 
+                          step={1}
+                          value={currentBidIndex}
+                          onChange={(e) => setBid(bidValues[Number(e.target.value)])}
                           className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary"
                         />
                         <div className="flex justify-between text-xs text-slate-400 font-medium mt-2">
