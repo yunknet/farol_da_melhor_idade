@@ -1,36 +1,44 @@
-# Projeto Front-end React
+# 🏠 Farol da Melhor Idade
 
-## Informações do Projeto
+Sistema de Gestão para Instituição de Longa Permanência para Idosos (ILPI) em Pirapora, MG.
 
-Este repositório contém uma aplicação front-end desenvolvida com tecnologias modernas para criação de interfaces web rápidas, responsivas e escaláveis.
+## 📋 Sobre o Projeto
 
-## Como editar o código
+O **Farol da Melhor Idade** é um sistema web desenvolvido como projeto da UCE III, com o objetivo de dar suporte às instituições de longa permanência em Pirapora. O sistema permite:
 
-Você pode editar o projeto de diferentes maneiras, conforme sua preferência.
+- 📦 **Vitrine de Necessidades/Doações** – Cadastro de itens necessários com nível de urgência, permitindo que doadores sejam assertivos
+- 🤝 **Cadastro de Voluntários** – Formulário completo para captação de voluntários com habilidades e disponibilidade
+- 📅 **Agendamento de Visitas** – Sistema de calendário para familiares agendarem visitas com controle de limite por horário
+- 🔒 **Conformidade LGPD** – Banner de cookies, política de privacidade e termos de uso
+- 💬 **Integração WhatsApp** – Botões de doação que direcionam ao WhatsApp da instituição
 
-### Usando sua IDE preferida (localmente)
+## 🚀 Como Rodar
 
-Para trabalhar no projeto localmente, siga os passos abaixo.
-
-#### Pré-requisitos
-
-- Node.js
-- npm (ou yarn/pnpm)
-
-Recomenda-se instalar o Node.js utilizando o **nvm**:  
-https://github.com/nvm-sh/nvm#installing-and-updating
-
-#### Passo a passo
-
-```sh
-# 1. Clone o repositório
-git clone <URL_DO_REPOSITORIO>
-
-# 2. Acesse a pasta do projeto
-cd <NOME_DO_PROJETO>
-
-# 3. Instale as dependências
+```bash
+# Instalar dependências
 npm install
 
-# 4. Inicie o servidor de desenvolvimento
+# Rodar em modo de desenvolvimento
 npm run dev
+
+# Build para produção
+npm run build
+```
+
+## 🛠️ Tecnologias
+
+- HTML5, CSS3, JavaScript (ES6+)
+- Vite (bundler)
+- Font Awesome (ícones)
+- Google Fonts (Playfair Display + Inter)
+
+## 👥 Equipes
+
+- **Equipe 1 (Tema 1):** Requisitos, Design e Relacionamento
+- **Equipe 2 (Tema 2):** Módulo de Necessidades e Doações
+- **Equipe 3 (Tema 3):** Módulo de Voluntariado e Visitas
+- **Equipe 4 (Tema 4):** Infraestrutura, Segurança e Capacitação
+
+## 📄 Licença
+
+Projeto acadêmico – UCE III – Pirapora, MG – 2026

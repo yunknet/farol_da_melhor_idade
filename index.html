@@ -1,35 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yuri Consórcios</title>
-
-  <meta name="description"
-    content="Realize seus sonhos sem juros e sem entrada. Parcelas que cabem no seu bolso, com toda a segurança." />
-  <meta name="author" content="Yuri Soares" />
-
-  <meta property="og:title" content="Yuri Consórcios - Conquiste seu carro ou imóvel" />
-  <meta property="og:description" content="Especialista em planejamento financeiro. Pare de pagar juros abusivos." />
-  <meta property="og:type" content="website" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <meta name="theme-color" content="#002b49" />
-
-  <!-- Preload fonts -->
+  <title>Farol da Melhor Idade – Sistema de Gestão para Asilos em Pirapora</title>
+  <meta name="description" content="Sistema de gestão para instituições de longa permanência em Pirapora. Cadastre necessidades, doe com assertividade, seja voluntário e agende visitas." />
+  <meta name="keywords" content="asilo, Pirapora, doação, voluntário, idoso, melhor idade, farol" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/jpeg" href="/yuri-icon.jpeg" />
-  <link rel="apple-touch-icon" href="/yuri-icon.jpeg" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" type="image/png" href="/images/logo.png" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
-
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
+  <!-- ===== COOKIE CONSENT BANNER (LGPD) ===== -->
+  <div id="cookie-banner" class="cookie-banner" style="display:none;">
+    <div class="cookie-content">
+      <p><i class="fas fa-cookie-bite"></i> Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="#" onclick="navigateTo('privacidade')">Política de Privacidade</a>.</p>
+      <div class="cookie-actions">
+        <button id="cookie-accept" class="btn btn-primary btn-sm">Aceitar</button>
+        <button id="cookie-reject" class="btn btn-outline btn-sm">Rejeitar</button>
+      </div>
+    </div>
+  </div>
 
+  <!-- ===== TOP BAR ===== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span><i class="fas fa-phone"></i> (38) 3741-0000</span>
+        <span><i class="fas fa-envelope"></i> contato@faroldamelhoridade.org.br</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/553837410000" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header id="header" class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo" onclick="navigateTo('home')">
+        <img src="/images/logo.png" alt="Farol da Melhor Idade" class="logo-img" />
+        <div class="logo-text">
+          <span class="logo-name">Farol da Melhor Idade</span>
+          <span class="logo-tagline">Iluminando caminhos com carinho</span>
+        </div>
+      </a>
+      <nav id="main-nav" class="main-nav">
+        <ul>
+          <li><a href="#" class="nav-link active" data-page="home" onclick="navigateTo('home')">Início</a></li>
+          <li><a href="#" class="nav-link" data-page="sobre" onclick="navigateTo('sobre')">Sobre Nós</a></li>
+          <li><a href="#" class="nav-link" data-page="necessidades" onclick="navigateTo('necessidades')">Necessidades</a></li>
+          <li><a href="#" class="nav-link" data-page="voluntarios" onclick="navigateTo('voluntarios')">Voluntários</a></li>
+          <li><a href="#" class="nav-link" data-page="agendamento" onclick="navigateTo('agendamento')">Agendar Visita</a></li>
+          <li><a href="#" class="nav-link" data-page="contato" onclick="navigateTo('contato')">Contato</a></li>
+        </ul>
+      </nav>
+      <button id="mobile-toggle" class="mobile-toggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="app"></main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,40 C360,100 720,0 1080,50 C1260,75 1380,30 1440,40 L1440,100 L0,100 Z" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="footer-body">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <img src="/images/logo.png" alt="Logo" class="footer-logo" />
+          <h3>Farol da Melhor Idade</h3>
+          <p>Iluminando caminhos com carinho para os idosos de Pirapora - MG.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/553837410000" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#" onclick="navigateTo('home')">Início</a></li>
+            <li><a href="#" onclick="navigateTo('sobre')">Sobre Nós</a></li>
+            <li><a href="#" onclick="navigateTo('necessidades')">Necessidades</a></li>
+            <li><a href="#" onclick="navigateTo('voluntarios')">Voluntários</a></li>
+            <li><a href="#" onclick="navigateTo('agendamento')">Agendar Visita</a></li>
+            <li><a href="#" onclick="navigateTo('contato')">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 – Pirapora, MG</li>
+            <li><i class="fas fa-phone"></i> (38) 3741-0000</li>
+            <li><i class="fas fa-envelope"></i> contato@faroldamelhoridade.org.br</li>
+            <li><i class="fas fa-clock"></i> Seg - Sex: 8h às 17h</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>LGPD</h4>
+          <ul>
+            <li><a href="#" onclick="navigateTo('privacidade')">Política de Privacidade</a></li>
+            <li><a href="#" onclick="navigateTo('termos')">Termos de Uso</a></li>
+          </ul>
+          <div class="footer-badge">
+            <i class="fas fa-shield-alt"></i>
+            <span>Site Seguro<br/>SSL Certificado</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Farol da Melhor Idade. Todos os direitos reservados. | Projeto UCE III – Pirapora, MG</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FAB ===== -->
+  <a href="https://wa.me/553837410000?text=Olá! Gostaria de saber mais sobre o Farol da Melhor Idade." target="_blank" class="whatsapp-fab" aria-label="Contato via WhatsApp" id="whatsapp-fab">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script type="module" src="/main.js"></script>
+</body>
 </html>
