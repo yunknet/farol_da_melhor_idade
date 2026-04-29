@@ -19,7 +19,7 @@ export function renderNecessidades() {
       <div class="section-header">
         <div class="section-label"><i class="fas fa-hand-holding-heart"></i> Vitrine de Doações</div>
         <h2>O que estamos precisando</h2>
-        <p>Confira os itens que o Asilo São Vicente de Paulo necessita e faça sua doação de forma assertiva. Clique no botão para combinar a entrega pelo WhatsApp.</p>
+        <p>Confira os itens que o Farol da Melhor Idade necessita e faça sua doação de forma assertiva. Clique no botão para combinar a entrega pelo WhatsApp.</p>
       </div>
 
       <div style="display:flex;gap:12px;justify-content:center;margin-bottom:36px;flex-wrap:wrap">
@@ -52,7 +52,7 @@ export function renderNecessidades() {
     <div class="container">
       <h2>Não encontrou o que procura?</h2>
       <p style="color:var(--text-light);max-width:500px;margin:12px auto 28px">Entre em contato conosco para saber outras formas de contribuir ou para doar valores em dinheiro.</p>
-      <a href="https://wa.me/553837411978?text=Olá! Gostaria de saber como posso ajudar o Asilo São Vicente de Paulo." target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
+      <a href="https://wa.me/553837411978?text=Olá! Gostaria de saber como posso ajudar o Farol da Melhor Idade." target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
     </div>
   </section>`;
 }

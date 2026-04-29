@@ -4,11 +4,11 @@ export function renderSobre() {
     <div class="container">
       <div class="section-header">
         <div class="section-label"><i class="fas fa-landmark"></i> Sobre Nós</div>
-        <h2>Conheça o Asilo São Vicente de Paulo</h2>
+        <h2>Conheça o Farol da Melhor Idade</h2>
         <p>Uma instituição dedicada ao cuidado integral dos idosos em Pirapora, MG.</p>
       </div>
       <div class="about-grid">
-        <div class="about-image"><img src="/images/about.png" alt="Sobre o Asilo São Vicente de Paulo" /></div>
+        <div class="about-image"><img src="/images/about.png" alt="Sobre o Farol da Melhor Idade" /></div>
         <div class="about-text">
           <h2>Nossa Missão</h2>
           <p>O Lar dos Idosos de São Vicente de Paulo (Asilo São Vicente de Paulo) é uma Associação Privada (sem fins lucrativos) e Instituição de Longa Permanência para Idosos (ILPI) que acolhe, cuida e protege pessoas da melhor idade na cidade de Pirapora, Minas Gerais.</p>

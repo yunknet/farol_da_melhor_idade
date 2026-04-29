@@ -1,44 +1,88 @@
-# 🏠 Asilo São Vicente de Paulo
+# 🏠 Farol da Melhor Idade
 
-Sistema de Gestão para Instituição de Longa Permanência para Idosos (ILPI) em Pirapora, MG.
+Sistema de Gestão Institucional para o **Asilo São Vicente de Paulo** (Lar dos Idosos de São Vicente de Paulo) em Pirapora, MG.
+
+Este projeto é uma plataforma web desenvolvida para otimizar a gestão de doações, voluntariado e agendamento de visitas, servindo como ponte entre a comunidade e a instituição.
+
+---
 
 ## 📋 Sobre o Projeto
 
-O **Asilo São Vicente de Paulo** é um sistema web desenvolvido como projeto da UCE III, com o objetivo de dar suporte às instituições de longa permanência em Pirapora. O sistema permite:
+O **Farol da Melhor Idade** foi concebido como parte integrante da UCE III, com foco em auxiliar instituições de longa permanência (ILPI). A plataforma visa dar transparência às necessidades da instituição e facilitar o engajamento de doadores e voluntários.
 
-- 📦 **Vitrine de Necessidades/Doações** – Cadastro de itens necessários com nível de urgência, permitindo que doadores sejam assertivos
-- 🤝 **Cadastro de Voluntários** – Formulário completo para captação de voluntários com habilidades e disponibilidade
-- 📅 **Agendamento de Visitas** – Sistema de calendário para familiares agendarem visitas com controle de limite por horário
-- 🔒 **Conformidade LGPD** – Banner de cookies, política de privacidade e termos de uso
-- 💬 **Integração WhatsApp** – Botões de doação que direcionam ao WhatsApp da instituição
+### 🌟 Funcionalidades Principais
 
-## 🚀 Como Rodar
+- 📦 **Vitrine de Necessidades** – Listagem em tempo real de itens necessários (alimentos, higiene, medicamentos) com sinalização de urgência.
+- 🤝 **Gestão de Voluntariado** – Sistema de cadastro para novos voluntários com coleta de habilidades e disponibilidade.
+- 📅 **Agendamento de Visitas** – Calendário interativo para agendamento prévio de visitas, garantindo o conforto dos residentes.
+- 💬 **Integração WhatsApp** – Botões de ação direta para comunicação instantânea com a administração do asilo.
+- 🔒 **Conformidade LGPD** – Implementação completa de políticas de privacidade e consentimento de cookies.
 
-```bash
-# Instalar dependências
-npm install
+---
 
-# Rodar em modo de desenvolvimento
-npm run dev
+## 🏢 Dados da Instituição
 
-# Build para produção
-npm run build
-```
+- **Razão Social:** Lar dos Idosos de São Vicente de Paulo
+- **CNPJ:** 18.890.772/0001-01
+- **Fundação:** 1977
+- **Endereço:** Rua Camilo dos Santos, Bairro Santos Dumont — Pirapora/MG, CEP 39274-168
+- **Telefone/WhatsApp:** (38) 3741-1978
+- **E-mail:** laridosos.pirapora@hotmail.com
 
-## 🛠️ Tecnologias
+---
 
-- HTML5, CSS3, JavaScript (ES6+)
-- Vite (bundler)
-- Font Awesome (ícones)
-- Google Fonts (Playfair Display + Inter)
+## 🚀 Tecnologias Utilizadas
 
-## 👥 Equipes
+O projeto utiliza uma stack moderna e leve, focada em performance e acessibilidade:
 
-- **Equipe 1 (Tema 1):** Requisitos, Design e Relacionamento
-- **Equipe 2 (Tema 2):** Módulo de Necessidades e Doações
-- **Equipe 3 (Tema 3):** Módulo de Voluntariado e Visitas
-- **Equipe 4 (Tema 4):** Infraestrutura, Segurança e Capacitação
+- **Frontend:** HTML5 semântico e CSS3 (Custom Variables, Flexbox, Grid).
+- **Lógica:** JavaScript Vanilla (ES6+).
+- **Ferramentas:** [Vite](https://vitejs.dev/) para bundling e desenvolvimento.
+- **Design System:** Tipografia premium (Playfair Display + Inter) e ícones (Font Awesome).
+- **Arquitetura:** SPA (Single Page Application) com roteamento via JavaScript.
+
+---
+
+## 🛠️ Como Executar o Projeto
+
+Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
+
+1. **Clonar o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/farol_da_melhor_idade.git
+   cd farol_da_melhor_idade
+   ```
+
+2. **Instalar dependências:**
+   ```bash
+   npm install
+   ```
+
+3. **Iniciar servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Gerar build para produção:**
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 👥 Organização Acadêmica (UCE III)
+
+O projeto foi estruturado através de frentes de trabalho colaborativas:
+
+- **Tema 1:** Requisitos, Design e Relacionamento (UX/UI).
+- **Tema 2:** Módulo de Necessidades e Doações.
+- **Tema 3:** Módulo de Voluntariado e Visitas.
+- **Tema 4:** Infraestrutura, Segurança e Capacitação.
+
+---
 
 ## 📄 Licença
 
-Projeto acadêmico – UCE III – Pirapora, MG – 2026
+Este é um projeto de caráter acadêmico desenvolvido para a UCE III - Unimontes / Pirapora-MG. Todos os dados institucionais são reais e públicos (IPEA).
+
+&copy; 2026 **Farol da Melhor Idade** | Pirapora, Minas Gerais.

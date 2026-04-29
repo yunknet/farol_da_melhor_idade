@@ -3,20 +3,18 @@ export function renderHome() {
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="/images/hero-banner.png" alt="Idosos felizes no Asilo São Vicente de Paulo" />
+      <img src="/images/hero-banner.png" alt="Idosos felizes no Farol da Melhor Idade" />
     </div>
     <div class="container hero-content">
       <div class="hero-badge"><i class="fas fa-heart"></i> Pirapora, Minas Gerais</div>
       <h1>Cuidado e <span>dignidade</span> para quem já nos deu tanto</h1>
-      <p>O Asilo São Vicente de Paulo é uma instituição de longa permanência dedicada ao bem-estar dos idosos de Pirapora. Ajude-nos a iluminar caminhos com carinho.</p>
+      <p>O Farol da Melhor Idade é uma instituição de longa permanência dedicada ao bem-estar dos idosos de Pirapora. Ajude o Asilo São Vicente de Paulo.</p>
       <div class="hero-buttons">
         <a href="#" class="btn btn-primary btn-lg" onclick="navigateTo('necessidades')"><i class="fas fa-hand-holding-heart"></i> Quero Doar</a>
         <a href="#" class="btn btn-outline btn-lg" onclick="navigateTo('voluntarios')"><i class="fas fa-users"></i> Ser Voluntário</a>
       </div>
       <div class="hero-stats">
-        <div class="hero-stat"><span class="number">45+</span><span class="label">Idosos acolhidos</span></div>
-        <div class="hero-stat"><span class="number">120+</span><span class="label">Voluntários ativos</span></div>
-        <div class="hero-stat"><span class="number">15</span><span class="label">Anos de história</span></div>
+        <p style="font-family:var(--font-heading); font-size:2rem; font-style:italic; color:var(--white); margin:0; text-shadow: 0 2px 10px rgba(0,0,0,0.2)">Iluminando caminhos com carinho</p>
       </div>
     </div>
   </section>
@@ -129,7 +127,7 @@ export function renderHome() {
       <h2 style="color:var(--white);font-size:2.4rem;margin-bottom:16px">Faça parte desta corrente do bem</h2>
       <p style="opacity:.9;max-width:600px;margin:0 auto 32px;font-size:1.1rem">Cada gesto de carinho ilumina a vida de quem já nos deu tanto. Junte-se a nós e ajude a transformar a realidade dos idosos de Pirapora.</p>
       <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-        <a href="https://wa.me/553837411978?text=Olá! Gostaria de fazer uma doação para o Asilo São Vicente de Paulo." target="_blank" class="btn btn-primary btn-lg"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
+        <a href="https://wa.me/553837411978?text=Olá! Gostaria de fazer uma doação para o Farol da Melhor Idade." target="_blank" class="btn btn-primary btn-lg"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
         <a href="#" class="btn btn-outline btn-lg" onclick="navigateTo('voluntarios')"><i class="fas fa-user-plus"></i> Cadastre-se</a>
       </div>
     </div>
