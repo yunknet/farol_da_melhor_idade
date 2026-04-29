@@ -1,10 +1,10 @@
-# 🏠 Farol da Melhor Idade
+# 🏠 Asilo São Vicente de Paulo
 
 Sistema de Gestão para Instituição de Longa Permanência para Idosos (ILPI) em Pirapora, MG.
 
 ## 📋 Sobre o Projeto
 
-O **Farol da Melhor Idade** é um sistema web desenvolvido como projeto da UCE III, com o objetivo de dar suporte às instituições de longa permanência em Pirapora. O sistema permite:
+O **Asilo São Vicente de Paulo** é um sistema web desenvolvido como projeto da UCE III, com o objetivo de dar suporte às instituições de longa permanência em Pirapora. O sistema permite:
 
 - 📦 **Vitrine de Necessidades/Doações** – Cadastro de itens necessários com nível de urgência, permitindo que doadores sejam assertivos
 - 🤝 **Cadastro de Voluntários** – Formulário completo para captação de voluntários com habilidades e disponibilidade

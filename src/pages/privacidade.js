@@ -9,7 +9,7 @@ export function renderPrivacidade() {
       </div>
       <div style="background:var(--white);padding:40px;border-radius:var(--radius-lg);box-shadow:var(--shadow);line-height:2;color:var(--text-light)">
         <h3 style="margin-bottom:12px">1. Coleta de Dados</h3>
-        <p>O Farol da Melhor Idade coleta dados pessoais exclusivamente para as finalidades descritas nesta política: cadastro de voluntários, agendamento de visitas e gestão de doações. Os dados coletados incluem nome, e-mail, telefone e informações de disponibilidade.</p>
+        <p>O Asilo São Vicente de Paulo coleta dados pessoais exclusivamente para as finalidades descritas nesta política: cadastro de voluntários, agendamento de visitas e gestão de doações. Os dados coletados incluem nome, e-mail, telefone e informações de disponibilidade.</p>
 
         <h3 style="margin:24px 0 12px">2. Uso dos Dados</h3>
         <p>Os dados coletados são utilizados para: comunicação com voluntários e doadores; agendamento e controle de visitas; envio de notificações sobre necessidades da instituição; melhoria dos serviços prestados.</p>
@@ -27,7 +27,7 @@ export function renderPrivacidade() {
         <p>Utilizamos cookies essenciais para o funcionamento do site e cookies de análise para melhorar sua experiência. Você pode gerenciar suas preferências de cookies a qualquer momento.</p>
 
         <h3 style="margin:24px 0 12px">7. Contato</h3>
-        <p>Para exercer seus direitos ou tirar dúvidas sobre esta política, entre em contato pelo e-mail: <strong>lgpd@faroldamelhoridade.org.br</strong> ou pelo telefone (38) 3741-0000.</p>
+        <p>Para exercer seus direitos ou tirar dúvidas sobre esta política, entre em contato pelo e-mail: <strong>laridosos.pirapora@hotmail.com</strong> ou pelo telefone (38) 3741-1978.</p>
 
         <p style="margin-top:24px;font-size:.85rem;opacity:.7">Última atualização: Abril de 2026</p>
       </div>

@@ -3,12 +3,12 @@ export function renderHome() {
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="/images/hero-banner.png" alt="Idosos felizes no Farol da Melhor Idade" />
+      <img src="/images/hero-banner.png" alt="Idosos felizes no Asilo São Vicente de Paulo" />
     </div>
     <div class="container hero-content">
       <div class="hero-badge"><i class="fas fa-heart"></i> Pirapora, Minas Gerais</div>
       <h1>Cuidado e <span>dignidade</span> para quem já nos deu tanto</h1>
-      <p>O Farol da Melhor Idade é uma instituição de longa permanência dedicada ao bem-estar dos idosos de Pirapora. Ajude-nos a iluminar caminhos com carinho.</p>
+      <p>O Asilo São Vicente de Paulo é uma instituição de longa permanência dedicada ao bem-estar dos idosos de Pirapora. Ajude-nos a iluminar caminhos com carinho.</p>
       <div class="hero-buttons">
         <a href="#" class="btn btn-primary btn-lg" onclick="navigateTo('necessidades')"><i class="fas fa-hand-holding-heart"></i> Quero Doar</a>
         <a href="#" class="btn btn-outline btn-lg" onclick="navigateTo('voluntarios')"><i class="fas fa-users"></i> Ser Voluntário</a>
@@ -59,7 +59,7 @@ export function renderHome() {
         <div class="about-text">
           <div class="section-label"><i class="fas fa-home"></i> Nossa História</div>
           <h2>Um lar de acolhimento e amor em Pirapora</h2>
-          <p>O Farol da Melhor Idade é uma instituição de longa permanência para idosos (ILPI) localizada em Pirapora, Minas Gerais. Nossa missão é oferecer assistência integral aos residentes, proporcionando qualidade de vida com dignidade e respeito.</p>
+          <p>O Lar dos Idosos de São Vicente de Paulo (Asilo São Vicente de Paulo) é uma Associação Privada (sem fins lucrativos) e Instituição de Longa Permanência para Idosos (ILPI) localizada em Pirapora, Minas Gerais. Fundada em 1977, nossa missão é oferecer assistência integral aos residentes, proporcionando qualidade de vida com dignidade e respeito.</p>
           <p>Contamos com equipe multidisciplinar incluindo assistência social, médica, nutricional, fisioterapêutica, psicológica e farmacêutica, contemplando todas as demandas da vida diária.</p>
           <div class="about-features">
             <div class="about-feature"><i class="fas fa-check-circle"></i><span>Assistência médica 24h</span></div>
@@ -129,7 +129,7 @@ export function renderHome() {
       <h2 style="color:var(--white);font-size:2.4rem;margin-bottom:16px">Faça parte desta corrente do bem</h2>
       <p style="opacity:.9;max-width:600px;margin:0 auto 32px;font-size:1.1rem">Cada gesto de carinho ilumina a vida de quem já nos deu tanto. Junte-se a nós e ajude a transformar a realidade dos idosos de Pirapora.</p>
       <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-        <a href="https://wa.me/553837410000?text=Olá! Gostaria de fazer uma doação para o Farol da Melhor Idade." target="_blank" class="btn btn-primary btn-lg"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
+        <a href="https://wa.me/553837411978?text=Olá! Gostaria de fazer uma doação para o Asilo São Vicente de Paulo." target="_blank" class="btn btn-primary btn-lg"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
         <a href="#" class="btn btn-outline btn-lg" onclick="navigateTo('voluntarios')"><i class="fas fa-user-plus"></i> Cadastre-se</a>
       </div>
     </div>

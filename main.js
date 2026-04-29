@@ -227,7 +227,7 @@ function initDonationButtons() {
     btn.addEventListener('click', () => {
       const item = btn.dataset.item;
       const msg = encodeURIComponent(`Olá! Gostaria de doar: ${item}. Como posso fazer a entrega?`);
-      window.open(`https://wa.me/553837410000?text=${msg}`, '_blank');
+      window.open(`https://wa.me/553837411978?text=${msg}`, '_blank');
     });
   });
 }

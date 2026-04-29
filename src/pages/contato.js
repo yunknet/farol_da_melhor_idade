@@ -12,19 +12,19 @@ export function renderContato() {
           <div class="contact-info-cards">
             <div class="contact-info-card">
               <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-              <div><h4>Endereço</h4><p>Rua Exemplo, 123 – Centro<br/>Pirapora, MG – CEP 39270-000</p></div>
+              <div><h4>Endereço</h4><p>Rua Camilo dos Santos, Bairro Santos Dumont<br/>Pirapora/MG – CEP 39274-168</p></div>
             </div>
             <div class="contact-info-card">
               <div class="icon"><i class="fas fa-phone"></i></div>
-              <div><h4>Telefone</h4><p>(38) 3741-0000</p></div>
+              <div><h4>Telefone</h4><p>(38) 3741-1978</p></div>
             </div>
             <div class="contact-info-card">
               <div class="icon"><i class="fab fa-whatsapp"></i></div>
-              <div><h4>WhatsApp</h4><p>(38) 99999-0000</p></div>
+              <div><h4>WhatsApp</h4><p>(38) 3741-1978</p></div>
             </div>
             <div class="contact-info-card">
               <div class="icon"><i class="fas fa-envelope"></i></div>
-              <div><h4>E-mail</h4><p>contato@faroldamelhoridade.org.br</p></div>
+              <div><h4>E-mail</h4><p>laridosos.pirapora@hotmail.com</p></div>
             </div>
             <div class="contact-info-card">
               <div class="icon"><i class="fas fa-clock"></i></div>
